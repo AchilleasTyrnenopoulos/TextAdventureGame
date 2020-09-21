@@ -18,6 +18,7 @@ using System.Threading.Tasks;
 
 namespace TextAdventureGame
 {
+    //final tests to understanding the basics of using github
     class Program
     {
         public static bool gameOVer = false;
