@@ -6,6 +6,7 @@ namespace TextAdventureGame
 {
     public class Game
     {
+        #region Variables
         //public bool bSword, bOil, bJewel, bStick;
 
         //bools for beginning & Act1
@@ -29,6 +30,7 @@ namespace TextAdventureGame
         bool playerWanted = false;
         static bool playerDead = false;
         bool invitation = false;
+        #endregion
 
         //print game title and overview
         public static void StartGame()
@@ -1283,11 +1285,20 @@ namespace TextAdventureGame
                 if (enemyDamage > 0)
                 {
                     Console.WriteLine($"The {_enemy.name} deals {enemyDamage} damage.");
-                    Console.WriteLine($"You have {Player.health} health.");
+                    if (Player.health > 0)
+                    {
+                        Console.WriteLine($"You have {Player.health} health.");
+                    }
+                    else
+                    {
+                        Player.health = 0;
+                        Console.WriteLine($"You have {Player.health} health.");
+                    }
                 }
 
                 if (Player.health <= 0)
                 {
+                    Player.health = 0;
                     Console.WriteLine("You are dead.");
                     GameOver();
                     playerDead = true;

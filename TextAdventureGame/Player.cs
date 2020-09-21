@@ -100,8 +100,6 @@ namespace TextAdventureGame
 
             DisplayStats();
         }
-
-
         //method for gaining XP points 
         public static void GainXp(int _xpPoints)
         {
@@ -130,7 +128,6 @@ namespace TextAdventureGame
         {
             health -= _damage;
         }
-
         public static double DoDamage(double _weaponDamage)//which wiil be the Item.damage, for example for the sword DoDamage(sword.damage);
         {
             double _criticalPercentage = Dice.RollDice(10) + critical;
