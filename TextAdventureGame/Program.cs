@@ -15,9 +15,9 @@ using System.Threading.Tasks;
  * https://creativecommons.org/licenses/by/4.0/
  */
 
+
 namespace TextAdventureGame
 {
-    //deleted changes
     class Program
     {
         public static bool gameOVer = false;
